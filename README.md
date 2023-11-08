@@ -1,10 +1,10 @@
-MELODY MEMENTOS
-Nama: Veronica Kylie
-NPM: 2206029563
-Kelas: PBP D
+<h2> MELODY MEMENTOS </h2><br>
+Nama: Veronica Kylie<br>
+NPM: 2206029563 <br>
+Kelas: PBP D <br>
 
-<summary>Tugas 7</summary>
 <details>
+<summary>Tugas 7</summary>
 
 ### 1. Apa perbedaan utama antara stateless dan stateful widget dalam konteks pengembangan aplikasi Flutter?
 Perbedaan utama antara stateless dan stateful widget adalah kebisaannya untuk diubah setelah diubah setelah dibuat. Stateless widget bersifat immutable, yaitu setelah diciptakan objeknya, propertinya tidak dapat diubah. Di sisi lain, stateful widget bersifat mutable, yaitu dapat berubah setelah dibuat. Jika ada perubahan, stateful widget akan melakukan rebuild untuk menerapkan perubahan yang terjadi.
