@@ -1,7 +1,7 @@
 MELODY MEMENTOS
 Nama: Veronica Kylie
 NPM: 2206029563
-Kelas: PBP C
+Kelas: PBP D
 
 <summary>Tugas 7</summary>
 <details>
