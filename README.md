@@ -34,3 +34,41 @@ Pertanyaan pada README saya jawab dengan mencari informasi dari internet dan dok
 Bagian bonus dikerjakan dengan mengisi atribut color dengan warna button yang diinginkan saat pembuatan objek Item. Lalu, atribut ini akan dipanggil sebagai isi dari properti color pada widget Material di ItemCard.
 
 </details>
+
+<details>
+<summary>Tugas 8</summary>
+
+### 1. Jelaskan perbedaan antara Navigator.push() dan Navigator.pushReplacement(), disertai dengan contoh mengenai penggunaan kedua metode tersebut yang tepat!
+Navigator.push() digunakan untuk menampilkan halaman baru dan menambahkannya di atas stack halaman-halaman sebelumnya. Ketika pengguna menekan tombol back, pengguna akan kembali ke halaman sebelumnya. Contoh penggunaan Navigator.push() adalah saat berpindah dari halaman utama ke halaman tambah item baru pada tugas individu. Di sisi lain, Navigator.pushReplacement() menampilkan halaman baru dengan menggantikan halaman yang berada di paling atas. Dampaknya pengguna tidak dapat kembali ke halaman sebelumnya menggunakan tombol back. Contoh penggunaan Navigator.pushReplacement() adalah saat melakukan navigasi ke suatu halaman dari sidebar pada tugas individu. Selain itu, situasi yang cocok untuk menggunakan pushReplacement adalah saat pengguna berhasil login dan pindah ke halaman lain.
+
+### 2. Jelaskan masing-masing layout widget pada Flutter dan konteks penggunaannya masing-masing!
+1. Container: digunakan sebagai wadah untuk mengatur tata letak dan memberi styling pada elemen, misalnya padding dan margin.
+2. Column: digunakan untuk mengatur elemen secara vertikal
+3. Row: digunakan untuk mengatur elemen secara horizontal
+4. Center: digunakan untuk mengatur posisi elemen ditengah
+5. ListView: digunakan untuk membuat daftar yang bisa discroll
+6. Stack: digunakan untuk menumpuk elemen di atas satu sama lain
+7. Card: digunakan untuk menampung elemen-elemen lain untuk membuat tampilan seperti kartu
+8. Expanded: digunakan untuk mengatur bagian yang mengisi ruang kosong pada Row atau Column
+9. Sizedbox: digunakan untuk mengatur ukuran tinggi dan lebar sebuh widget
+10. GridView: digunakan untuk menampilkan elemen dengan bentuk tabel
+11. Align: digunakan untuk mengatur posisi align dari child terhadap elemen parentnya
+12. Padding: digunakan untuk menambahkan padding di sekeliling elemen child
+13. Transform: digunakan untuk mengubah ukuran dan posisi elemen child
+
+### 3. Sebutkan apa saja elemen input pada form yang kamu pakai pada tugas kali ini dan jelaskan mengapa kamu menggunakan elemen input tersebut!
+Elemen input yang digunakan pada form tugas ini adalah TextFormField. Saya menggunakan elemen input ini karena semua input yang diminta dari pengguna berupa teks dan jenis elemen input ini cocok untuk input teks.
+
+### 4. Bagaimana penerapan clean architecture pada aplikasi Flutter?
+Penerapan clean architecture pada Flutter berarti membagi aplikasi menjadi beberapa lapisan, yaitu:
+- Lapisan logika bisnis: merupakan lapisan yang berisi model dan logika bisnis. Flutter biasa menggunakan BLoC (Business Logic Component), Provider, atau Redux untuk mengelola logika bisnis.
+- Lapisan data: lapisan yang berhubungan dengan pemanggilan API, basis data, penyimpanan lokal, dan sumber data eksternal lainnya
+- Lapisan presentation: merupakan lapisan yang mengatur penggunaan widget untuk membuat tampilan UI 
+ 
+### 5. Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas secara step-by-step! (bukan hanya sekadar mengikuti tutorial)
+Untuk membuat halaman form baru, saya membuat folder baru bernama screens dan di dalamnya saya membuat file baru bernama shoplist_form.dart. Lalu, file menu.dart saya pindahkan ke folder itu. Pada 
+file shoplist_form.dart saya membuat sebuah class baru dan didalamnya membuat tampilannya dengan berbagai widget. Form dibuat dengan widget Form dan inputnya menggunakan TextFormField. Lalu, atribut/propertinya saya isi sesuai kebutuhan. Untuk membuat validasi input, saya menggunakan properti onChanged yang akan mengambil data yang diinput ke dalam sebuah variabel. Lalu, properti validator diisi dengan memastikan tidak kosong atau null. Validasi input pada field jumlah ditambahkan dengan memastikan inputnya angka menggunakan int.tryParse.
+Selanjutnya, saya membuat save button dengan widget ElevatedButton dan pada properti onPressed akan dijalankan fungsi untuk memunculkan pop up item berhasil disimpan. Pop up dibuat dengan widget AlertDialog
+Selanjutnya, pada menu.dart saya menambahkan di properti onTap pada card yang dibuat. Saya menambahkan ketentuan jika nama item yang dipencet adalah "Tambah Item", maka akan menjalankan push halaman form tambah item.
+Terakhir untuk left drawer, saya lakukan dengan membuat folder baru bernama widgets. Disitu saya menambahkan file baru bernama left_drawer.dart. Kemudian, saya menggunakan widget ListTile untuk membuat opsi halaman utama dan tambah item. Di dalam properti onTap, saya menambahkan function untuk mengarahkan ke halaman yang sesuai.
+</details>
